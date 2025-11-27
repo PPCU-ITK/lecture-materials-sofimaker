@@ -1,0 +1,1 @@
+print("My favorite number is: " + 5)

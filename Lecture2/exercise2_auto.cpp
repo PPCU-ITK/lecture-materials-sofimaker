@@ -38,19 +38,19 @@ int main() {
     std::cout << "my_variable is: " << my_variable << std::endl;
 
     // --- TASK 2: Fix this line ---
-    my_variable = "now I'm a string!"; // ILLEGAL! my_variable is an 'int' forever.
+    auto my_variable2 = "now I'm a string!"; // ILLEGAL! my_variable is an 'int' forever.
     // ---
     
-    std::cout << "my_variable is now: " << my_variable << std::endl;
+    std::cout << "my_variable is now: " << my_variable2 << std::endl;
 
 
     // --- TASK 3: Predict the type for these 'auto' variables ---
 
-    // auto var_a = 3.14f; // I predict 'var_a' will be:
-    // auto var_b = "hello world"; // I predict 'var_b' will be: (Hint: it's not std::string!)
-    // auto var_c = 'z'; // I predict 'var_c' will be:
-    // auto var_d = 1.234; // I predict 'var_d' will be:
-    // auto var_e = true; // I predict 'var_e' will be:
+     auto var_a = 3.14f; // I predict 'var_a' will be:
+     auto var_b = "hello world"; // I predict 'var_b' will be: (Hint: it's not std::string!)
+     auto var_c = 'z'; // I predict 'var_c' will be:
+     auto var_d = 1.234; // I predict 'var_d' will be:
+     auto var_e = true; // I predict 'var_e' will be:
 
 
     // --- BONUS ---
