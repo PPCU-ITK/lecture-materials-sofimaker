@@ -4,7 +4,10 @@
 // It should take an integer POINTER as a parameter.
 // It should multiply the value AT that address by 3.
 void tripler(int* number_ptr) {
-    // Your code here
+    
+    3* *number_ptr;
+    *number_ptr = 3* *number_ptr;
+    
     // Remember: *number_ptr gets you the value
 }
 
@@ -16,7 +19,8 @@ int main() {
     // TODO 2: Call the tripler function.
     // Hint: You cannot pass 'my_score' directly. You must pass its address!
     
-
+    tripler(&my_score);
+    //std::cout << "tripler value: " << tripler << std::endl;
     std::cout << "Score after (should be 30): " << my_score << std::endl;
 
     return 0;
