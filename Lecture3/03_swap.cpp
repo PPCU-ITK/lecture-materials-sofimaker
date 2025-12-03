@@ -6,7 +6,7 @@
 // (You will need a temporary integer variable inside the function).
 
 void swap_fruit(int* a, int* b) {
-    // Your code here
+    
 }
 
 int main() {
