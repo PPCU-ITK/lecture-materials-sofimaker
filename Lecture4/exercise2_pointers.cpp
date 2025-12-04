@@ -27,10 +27,10 @@ int main() {
     //       move it to the next element.
 
     // TODO: Write your while-loop here.
-    // while (p != p_end) {
-    //    ...
-    //    ...
-    // }
+    while (p != p_end) {
+        std::cout << *p << std::endl;
+        p++;
+    }
 
     std::cout << std::endl;
 

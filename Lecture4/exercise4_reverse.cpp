@@ -45,13 +45,14 @@ void reverse_string(char* str) {
     //    e) Decrement 'right' (right--).
 
     // TODO: Write your while-loop here.
-    // while (left < right) {
-    //    ...
-    //    ...
-    //    ...
-    //    ...
-    //    ...
-    // }
+    while (left < right) {
+        char temp = *left;
+        *left = *right;
+        *right = temp;
+        left++;
+        right--;
+       
+    }
 }
 
 

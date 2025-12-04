@@ -18,9 +18,9 @@ int main() {
     //    using the [ ] operator (e.g., data[i]).
 
     // TODO: Write your for-loop here.
-    // for (...) {
-    //     std::cout << data[i] << " ";
-    // }
+     for (int number = 0; number < n; number ++) {
+        std::cout << data[number] <<std::endl;
+    }
 
 
     std::cout << std::endl;

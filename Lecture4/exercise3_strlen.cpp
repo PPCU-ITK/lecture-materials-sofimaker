@@ -24,10 +24,10 @@ int my_strlen(const char* str) {
     //       the next character.
 
     // TODO: Write your while-loop here.
-    // while (*str != '\0') {
-    //    ...
-    //    ...
-    // }
+    while (*str != '\0') {
+        length++;
+        str++;
+    }
 
 
     // 4. Return the final length.
