@@ -13,7 +13,7 @@ int main() {
     // The code is trying to deallocate an ARRAY
     // using the 'delete' operator for a single object.
     // This is Undefined Behavior.
-    delete p_arr;
+    delete[] p_arr;
     
     // TODO: Replace the 'delete' line above with the
     // *correct* operator to deallocate an ARRAY.

@@ -19,7 +19,7 @@ void leaky_function() {
     // 3. Forget to free the memory
     // The function ends, 'p' is destroyed, but the 1000 ints
     // on the heap are NOT freed. This is a leak.
-
+    delete p;
     // TODO: Add the one line of code needed to fix this memory leak
     // before the function ends.
 

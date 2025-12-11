@@ -27,13 +27,14 @@ void reset_score_by_value(Student s) { // s is a COPY
  * TASK: Implement this function.
  * @brief Resets a student's score to 0 using a pointer.
  */
-// void reset_score_by_pointer(Student* p_student) {
+ void reset_score_by_pointer(Student* p_student) {
 //     // HINT: Use the -> (arrow) operator to access
-//     // members of a struct via a pointer.
-//     std::cout << "  Inside by_pointer: Resetting " 
-//               << ... << "'s score..." << std::endl;
-//     ...
-// }
+//
+std::cout << "  Inside by_pointer: Resetting "  << p_student->name << "s score.." << std::endl;
+p_student -> score = 0; 
+
+std::cout << "  Inside by_pointer: Score is now " << p_student->score << std::endl;
+};
 
 int main() {
     Student student_a = {"Alice", 85};
@@ -55,7 +56,7 @@ int main() {
 
     // TASK: Call your 'reset_score_by_pointer' function here.
     // HINT: You must pass the *address* of student_a.
-    // reset_score_by_pointer(...);
+    reset_score_by_pointer(&student_a);
     
     std::cout << "After call:" << std::endl;
     print_student(student_a); // This should now show 0!
