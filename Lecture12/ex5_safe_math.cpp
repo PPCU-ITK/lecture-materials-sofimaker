@@ -121,3 +121,79 @@ int main() {
 
     return 0;
 }
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+#include <iostream>
+#include <vector>
+#include <string>
+#include <iomanip> // For setting precision in output
+
+using namespace std;
+
+// TODO: TASK 1 - Define the 'Product' struct/class here
+struct Product {
+    std::string name;
+    double price;
+    int stock_level;
+};
+
+// TODO: TASK 3 - Write 'calculateTotalValue' here
+// Arguments: A constant reference to a vector of Products (const std::vector<Product>&)
+// Return: The total calculated value (sum of price * stock_level for all products)
+double calculateTotalValue(const std::vector<Product>& inventory) {
+    double total_value = 0.0;
+    
+    // Use a range-based for loop to iterate over the items
+    for (const Product& p : inventory) {
+        total_value += p.price * p.stock_level;
+    }
+    
+    return total_value;
+}
+
+
+// TODO: TASK 4 - Write 'findLowStock' here
+// Arguments: A constant reference to a vector of Products, and an integer threshold
+// Return: void (it should print the low stock item names)
+void findLowStock(const std::vector<Product>& inventory, int threshold) {
+    for (const Product& p : inventory) {
+        if (p.stock_level < threshold) {
+            std::cout << "- " << p.name 
+                      << " (Stock: " << p.stock_level << ")" << std::endl;
+        }
+    }
+}
+
+int main() {
+    // Set output formatting for currency
+    std::cout << std::fixed << std::setprecision(2);
+    
+    // TODO: TASK 2 - Create the 'inventory' vector and add items
+    std::vector<Product> inventory;
+    
+    // Add items (Name, Price, Stock)
+    inventory.push_back({"Laptop", 1200.00, 5});
+    inventory.push_back({"Monitor", 350.50, 25});
+    inventory.push_back({"Webcam", 45.99, 8});
+    inventory.push_back({"Headphones", 99.00, 15});
+    inventory.push_back({"Flash Drive", 10.99, 2});
+    
+    std::cout << "--- Inventory Status ---" << std::endl;
+    for (const auto& p : inventory) {
+        std::cout << p.name << " | Price: $" << p.price << " | Stock: " << p.stock_level << std::endl;
+    }
+    
+    // Testing Task 3
+    double total = calculateTotalValue(inventory);
+    std::cout << "\nTotal Inventory Value: $" << total << std::endl;
+
+    // Testing Task 4
+    int low_stock_threshold = 10;
+    std::cout << "\nLow Stock Items (Threshold < " << low_stock_threshold << "):" << std::endl;
+    findLowStock(inventory, low_stock_threshold);
+
+    return 0;
+}
