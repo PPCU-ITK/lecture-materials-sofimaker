@@ -43,7 +43,13 @@ int main() {
     Student* p_student = find_student_by_id(999);
     
     // TASK: This line will crash the program.
-    // Explain why, and then add a check to prevent the crash.
+    // Explain why, and then add a check to prevent the crash: Because when we look for ID999 this doesn't exist and returns nullptr.
+    if (p_student != nullptr){
+        std::cout << "Found:" << p_student->name << std::endl;
+    } else {
+        std::cout << "Error:Student with ID 999 not found" <<std::endl;
+    }
+
     std::cout << "Found: " << p_student->name << std::endl;
     
     

@@ -19,6 +19,7 @@ void create_user_profile() {
     // The memory is leaked when this function returns.
 
     // TASK: Fix this leak. Add the correct 'delete[]' call.
+    delete profile_data;
 }
 
 int main() {
