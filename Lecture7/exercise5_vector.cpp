@@ -4,10 +4,10 @@
 // TODO: Implement this function
 // It should take a 'const' reference to a vector,
 // loop over its elements, and return their sum.
-int sumVector(/* parameters go here */) {
+int sumVector(const std::vector<int>&v) {
     int sum = 0;
     // TODO: Loop over the vector and add to sum
-
+    for (int num, num<sum,  num++)
     return sum;
 }
 

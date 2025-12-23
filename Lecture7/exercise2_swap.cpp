@@ -13,7 +13,9 @@ void swap_by_value(int a, int b) {
 // to make it correctly swap the values of 'a' and 'b'
 // in the 'main' function.
 void swap_by_reference(int& a, int& b) {
-    // Your code here
+   int temp = a ;
+   a = b ;
+   b = temp ;
 }
 
 int main() {

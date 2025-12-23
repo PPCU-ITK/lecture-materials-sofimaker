@@ -4,9 +4,13 @@
 // TODO: Implement this function
 // It should take a 'const' reference to a vector
 // and print all its elements on a single line.
-void printVector(/* parameters go here */) {
+void printVector(const std::vector<int>&v) {
     // TODO: Use a range-based for loop to print
     // all elements, separated by a space.
+    for (int num : v) {
+        std::cout << num << "num";
+    }
+    std::cout << std::endl;
 
     // TODO (Bonus): Try to add 'v.push_back(100);'
     // and see the compiler error.
