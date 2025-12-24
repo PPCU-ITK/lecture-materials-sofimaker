@@ -25,10 +25,10 @@ int main() {
 
     // 2. TODO: Pass 'my_ptr' to 'take_ownership'.
     // UNCOMMENT the line below. It will fail to compile initially.
-    // take_ownership(my_ptr);
+    //take_ownership(my_ptr);
 
     // 3. Fix the error by using std::move()
-    // take_ownership(std::move(my_ptr)); 
+    take_ownership(std::move(my_ptr)); 
 
     // 4. Check the state of the original pointer
     if (my_ptr == nullptr) {

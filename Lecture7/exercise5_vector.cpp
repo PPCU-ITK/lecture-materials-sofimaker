@@ -7,18 +7,23 @@
 int sumVector(const std::vector<int>&v) {
     int sum = 0;
     // TODO: Loop over the vector and add to sum
-    for (int num, num<sum,  num++)
+    for (int num: v) {
+        sum += num;
+    }
     return sum;
 }
 
 // TODO: Implement this function
 // It should take a (non-const) reference to a vector
 // and add 10 to *every* element in place.
-void addTen(/* parameters go here */) {
+void addTen(std::vector<int>&v) {
     // TODO: Loop over the vector.
     // Hint: You need a loop that gives you a *reference*
     // to each element, like:
     // for (int& val : v) { ... }
+    for (int&val : v){
+        val +=10;
+    }
 }
 
 
@@ -30,17 +35,17 @@ int main() {
     std::cout << std::endl;
 
     // TODO: Call sumVector and print the result
-    // std::cout << "Sum: " << sumVector(numbers) << std::endl;
+    std::cout << "Sum: " << sumVector(numbers) << std::endl;
 
     // TODO: Call addTen
-    // addTen(numbers);
+    addTen(numbers);
 
     std::cout << "Vector after addTen: ";
     for (int n : numbers) std::cout << n << " ";
     std::cout << std::endl;
 
     // TODO: Call sumVector again and print the new sum
-    // std::cout << "New sum: " << sumVector(numbers) << std::endl;
+    std::cout << "New sum: " << sumVector(numbers) << std::endl;
 
     return 0;
 }

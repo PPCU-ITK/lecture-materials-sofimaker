@@ -14,7 +14,7 @@ struct Manager {
 
 struct Worker {
     // TODO: This shared_ptr causes a cycle. Change it to std::weak_ptr<Manager>.
-    std::shared_ptr<Manager> boss; 
+    std::weak_ptr<Manager> boss; 
     
     ~Worker() { std::cout << "Worker Destroyed\n"; }
 };
